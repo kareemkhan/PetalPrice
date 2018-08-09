@@ -1,0 +1,103 @@
+﻿@using (Html.BeginForm())
+{
+@*@Html.AntiForgeryToken()*@
+
+<div class="form-horizontal" style="padding-left:150px;padding-top:10px">
+    <h4>Contact Us</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-6" id="contactForm">
+            <div class="form-group">
+                <span>Name:</span>
+                @Html.TextBox("Name", null, new { @class = "form-control", id="txtFirstName", autocomplete="off" })
+                <span id="spnFirstName" style="display:none;color:red">Please Enter First Name.</span>
+            </div>
+            <div class="form-group">
+                <span>Email ID:</span>
+                @Html.TextBox("EmailID", null, new { @class = "form-control",  id="txtemail", autocomplete="off"  })
+                <span id="spnemail" style="display:none;color:red">Please Enter Email ID.</span>
+            </div>
+            <div class="form-group">
+                <span>Phone Number:</span>
+                @Html.TextBox("PhoneNumber", null, new { @class = "form-control", maxlength = "10",  id="txtPhoneNumber", type = "number", autocomplete="off"  })
+                <span id="spnPhoneNumber" style="display:none;color:red">Please Enter Valid Phone Number.</span>
+            </div>
+            <div class="form-group">
+                <span>Comments:</span>
+                @Html.TextArea("Comments", null, new { @class = "form-control",cols = "45", rows = "3", id="txtComments" })
+            </div>
+
+
+            <div class="form-group">
+                <input type="button" value="Submit" id="btnSubmit" />
+            </div>
+        </div>
+    </div>
+
+    <div id="successMsg" style="display:none">
+        <h2 style="color:green">Thank you for the information. Our Expert will reach out to your shortly.</h2>
+    </div>
+</div>
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    $("#btnSubmit").click(function(){
+
+        if($("#txtFirstName").val() == "")
+    {
+        $("#spnFirstName").show();
+        return false;
+    }
+    else
+    {
+        $("#spnFirstName").hide();
+    }
+
+      if($("#txtemail").val() == "")
+    {
+        $("#spnemail").show();
+        return false;
+    }
+    else
+    {
+        $("#spnemail").hide();
+    }
+
+      if($("#txtPhoneNumber").val() == "")
+    {
+        $("#spnPhoneNumber").show();
+        return false;
+    }
+    else if($("#txtPhoneNumber").val().length != "10"){
+        $("#spnPhoneNumber").show();
+        return false;
+    }
+    else
+    {
+        $("#spnPhoneNumber").hide();
+    }
+
+        var email = $("#txtemail").val();
+        var phone = $("#txtPhoneNumber").val();
+        var comments = $("#txtComments").val();
+
+        $.ajax({
+            method:'POST' ,
+            url: "Contact/Home",
+            data: { email: email, phone: phone, comments: comments }
+        })
+            .done(function (msg) {
+                $("#contactForm").hide();
+                $("#successMsg").show();
+            });
+
+        
+    });
+
+    });
+</script>

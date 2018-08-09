@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "AllOccassions";
+}
+
+<h2>AllOccassions</h2>
+@{ 
+    Html.RenderAction("HomepageCategories", "Catalog");
+    Html.RenderWidget("home_page_after_categories");
+}

@@ -1,0 +1,105 @@
+﻿@model ProductDetailsModel
+
+@using SmartStore.Web.Models.Catalog;
+@using SmartStore.Core.Domain.Orders;
+
+
+@{
+    var addModel = Model.AddToCart;
+    var showBuyAction = Model.IsAvailable && !Model.AddToCart.DisableBuyButton;
+}
+
+@*<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>*@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#btnShow').click(function () {
+            $('#address').show();
+            $('#selectedProduct').hide();
+            $('#viewedProduct').hide();
+            $('#pd-gallery-container').hide();
+            $('#selectedProduct2').hide();
+            $('#selectedProduct3').hide();
+            $('#selectedProduct4').hide();
+        });
+
+
+        $('#closeShippingDetails').click(function () {
+            $('#address').hide();
+            $('#selectedProduct').show();
+            $('#viewedProduct').show();
+            $('#pd-gallery-container').show();
+            $('#selectedProduct2').show();
+            $('#selectedProduct3').show();
+            $('#selectedProduct4').show();
+        });
+    });
+</script>
+
+<div class="row pd-offer-actions" id="selectedProduct3">
+    @if (showBuyAction)
+    {
+        if (Model.ProductPrice.CallForPrice)
+        {
+            <div class="col">
+                <a class="btn btn-secondary btn-lg btn-block" rel="nofollow" href="@Url.Action("AskQuestion", "Product", new { id = Model.Id })">
+                    <i class="fa fa-envelope"></i>
+                    <span>@T("Products.CallForPrice.GoToForm")</span>
+                </a>
+            </div>
+        }
+        else
+        {
+            @*if (!Model.AddToCart.HideQuantityControl)
+                {
+                    <div class="col pd-offer-action-qty">
+                        @Html.EditorFor(model => model.AddToCart, "QtyInput", new { large = true })
+                    </div>
+                }*@
+
+            <input class="large" type="button" value="Customize For Me" id="btnShow" />
+            @*<div class="col flex-grow-1">
+                                    <a class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
+                                       href="#"
+                                       rel="nofollow"
+                                       data-form-selector="#pd-form"
+                                       data-type="cart"
+                data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = Model.AddToCart.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })'
+                                       data-action="add"
+                                       data-toggle="offcanvas" data-target="#offcanvas-cart">
+                                        <span style="color:red">REQUEST A QUOTE</span>
+                                    </a>
+                                </div>*@
+
+
+        }
+    }
+
+</div>
+
+<div id="address" style="display:none">
+    @*@Html.Partial("_shippingAddress");*@
+    @{
+        var addressModel = new SmartStore.Core.Domain.Shipping.ShippingAddress();
+        var dataDictAddToCart = new ViewDataDictionary();
+        dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
+        Html.RenderPartial("ShippingAddressWithModel", addressModel, dataDictAddToCart);
+    }
+
+    @*<div class="col flex-grow-1">
+            <a class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
+               href="#"
+               rel="nofollow"
+               data-form-selector="#pd-form"
+               data-type="cart"
+               data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = Model.AddToCart.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })'
+               data-action="add"
+               data-toggle="offcanvas" data-target="#offcanvas-cart">
+                <span style="color:red">REQUEST A QUOTE</span>
+            </a>
+        </div>*@
+    <input type="button" value="Back" id="closeShippingDetails" class="btn btn-primary btn-lg btn-block" />
+    <input type="submit" name="response" value="REQUEST A QUOTE" formaction=@Url.Action("AddProduct", "ShoppingCart", new { productId = Model.AddToCart.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart  }) formmethod="post" class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link" />
+</div>
+
+

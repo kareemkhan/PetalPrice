@@ -1,0 +1,45 @@
+﻿<form method="post">
+    <div id="address">
+        <div>
+            <span>First Name</span>
+            <input type="text" id="txtFirstName" />
+        </div>
+        <div>
+            <span>Last Name</span>
+            <input type="text" id="txtLastName" />
+        </div>
+        <div>
+            <span>Email</span>
+            <input type="email" id="txtEmail" />
+        </div>
+        <div>
+            <span>Phone Number</span>
+            <input type="text" id="txtPhoneNumber" />
+        </div>
+        <div>
+            <span>Address</span>
+            <textarea id="txtAddress"></textarea>
+        </div>
+        <div>
+            <span>ZipCode</span>
+            <input type="text" id="txtCodeName" />
+        </div>
+
+
+        <div class="col flex-grow-1">
+
+            <a class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
+               href="#"
+               rel="nofollow"
+               data-form-selector="#pd-form"
+               data-type="cart"
+               data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'
+               data-action="add"
+               data-toggle="offcanvas" data-target="#offcanvas-cart">
+                <span style="color:red">REQUEST A QUOTE</span>
+            </a>
+        </div>
+    </div>
+
+
+</form>

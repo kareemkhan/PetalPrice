@@ -1,0 +1,207 @@
+﻿@{
+    Layout = "_Layout";
+}
+<link href="~/Content/vendors/jquery.bxslider.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.bxslider.js"></script>
+
+
+<div class="page-main canvas-slidable">
+
+    <div class="banner">
+        <div class="">
+            <div class="" style="max-width: 100%;">
+                <div class="" style="width: 100%; overflow: hidden; position: relative; height: 380px;">
+                    <ul class="" style="width: 315%; position: relative; transition-duration: 0s; transform: translate3d(-1423px, 0px, 0px);">
+                        <li style="float: left; list-style: none; position: relative; " class="">
+                            <img src="~/Content/Images/NewImages/b3.png" />
+                        </li>
+                        <li style="float: left; list-style: none; position: relative; width: 1443px;">
+                            <img src="~/Content/Images/NewImages/b1.png" />
+                        </li>
+                        <li style="float: left; list-style: none; position: relative; width: 1423px;" class="">
+                            <img src="~/Content/Images/NewImages/b3.png" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    @*<div class="section-one" style="margin-top: 24px;">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-one-cont">
+                        <img src="~/Content/Images/NewImages/icon1.png" />
+                        <h2>Innovative Shipping</h2>
+                        <p>
+                            Our unique packaging technology
+                            (made from 100% recycled materials)
+                            holds your plant and pot securely in
+                            place so it gets to you safely and without the mess.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="section-one-cont">
+                        <img src="~/Content/Images/NewImages/icon2.png" />
+                        <h2>Living Room Ready</h2>
+                        <p>
+                            Your full-grown plant is shipped ready-to-go in a
+                            pot with proper drainage - matching saucer
+                            included. simplay unpack, place, and enjoy
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="section-one-cont">
+                        <img src="~/Content/Images/NewImages/icon3.png" />
+                        <h2>Plenty of Guidance</h2>
+                        <p>
+                            From detailed care instructions
+                            to real-time support, we're here to make
+                            plants easy. Tweet, chat, or email our
+                            plant care experts anytime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+</div>
+
+<div class="page home-page">
+    <div class="page-body">
+        <div class="wrapper">
+            <div class="home-categories">
+                <h3 class="home-categories-header mb-2"> Flowers Delivered - On Time, Every Time</h3>
+
+
+
+                <div class="row mb-2">
+                    <div class="col home-art" data-id="1">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 11})' title="Show products in category Flower">
+                                <img src="//icommconnect/PP/media/image/576/flower.png?size=250" alt="Picture for category Flower">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 11})' title="Flower">
+                                <span>Graduation</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col home-art" data-id="2">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 17})' title="Show products in category Plant">
+                                <img src="//icommconnect/PP/media/image/569/plant.png?size=250" alt="Picture for category Plant">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 17})' title="Plant">
+                                <span>I m Sorry</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col home-art" data-id="12">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 18})' title="Show products in category Anniversary">
+                                <img src="//icommconnect/PP/media/image/572/anniversary.png?size=250" alt="Picture for category Anniversary">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 18})' title="Anniversary">
+                                <span>Just Because</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col home-art" data-id="13">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 106})' title="Show products in category Birthday">
+                                <img src="//icommconnect/PP/media/image/570/birthday.png?size=250" alt="Picture for category Birthday">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 106})' title="Birthday">
+                                <span>Wedding Collection</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col home-art" data-id="14">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 105})' title="Show products in category Congratulations">
+                                <img src="//icommconnect/PP/media/image/573/congratulations.png?size=250" alt="Picture for category Congratulations">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 105})' title="Congratulations">
+                                <span>Thank You</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col home-art" data-id="14">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 101})' title="Show products in category New Baby">
+                                <img src="//icommconnect/PP/media/image/573/congratulations.png?size=250" alt="Picture for category New Baby">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 101})' title="New Baby">
+                                <span>New Baby</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col home-art" data-id="14">
+                        <div class="art-picture-block mt-3 text-center">
+                            <a class="d-block" href='@Url.Action("Category", "Catalog", new { categoryId = 102})' title="Show products in category Sympathy & Funeral">
+                                <img src="//icommconnect/PP/media/image/573/congratulations.png?size=250" alt="Picture for category Sympathy & Funeral">
+                            </a>
+                        </div>
+                        <div class="art-genericname">
+                            <a href='@Url.Action("Category", "Catalog", new { categoryId = 102})' title="Sympathy & Funeral">
+                                <span>Sympathy & Funeral</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            @{
+                Html.RenderWidget("home_page_top");
+
+                //Html.RenderAction("TopicBlock", "Topic", new { systemName = "HomePageText", isLead = true });
+                //Html.RenderWidget("home_page_after_intro");
+
+                @*<h4 style="color:brown"> Select Flower Type</h4>
+                Html.RenderAction("HomepageCategories", "Catalog");
+                Html.RenderWidget("home_page_after_categories");*@
+
+                // Html.RenderAction("HomepageProducts", "Catalog");
+                // Html.RenderWidget("home_page_after_products");
+
+                //Html.RenderAction("HomepageBestSellers", "Catalog");
+                //Html.RenderWidget("home_page_after_bestsellers");
+
+                //Html.RenderAction("HomepageManufacturers", "Catalog");
+                //Html.RenderWidget("home_page_after_manufacturers");
+
+                //Html.RenderAction("PopularProductTags", "Catalog", new { area = "" });
+                //Html.RenderWidget("home_page_after_tags");
+
+                //Html.RenderAction("HomePageNews", "News");
+                //Html.RenderWidget("home_page_after_news");
+
+                //Html.RenderAction("HomePagePolls", "Poll");
+                //Html.RenderWidget("home_page_after_polls");
+
+                @* TODO: (mc) find more intelligent way of rendering RecentlyViewedProductsBlock globally *@
+                //Html.RenderAction("RecentlyViewedProductsBlock", "Catalog", new { area = "" });
+
+                Html.RenderWidget("home_page_bottom");
+            }
+
+        </div>
+    </div>
+</div>

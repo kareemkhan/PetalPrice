@@ -1,0 +1,296 @@
+﻿@model SmartStore.Core.Domain.Shipping.ShippingAddress
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $( "#datepicker").datepicker({ minDate: 1, maxDate: "+4M" });
+
+        let dropdown = $('#example');
+
+        dropdown.empty();
+
+        dropdown.append('<option selected="true" disabled>Choose Type</option>');
+        dropdown.prop('selectedIndex', 0);
+
+        $.ajax({
+            url: "Product/GetCategories",
+            cache: false,
+            success: function (data) {
+                $.each(data, function (key, entry) {
+                    dropdown.append($('<option></option>').attr('value', entry.Name).text(entry.Name));
+                })
+            }
+        });
+
+    })();
+
+</script>
+@using (Html.BeginForm())
+{
+@*@Html.AntiForgeryToken()*@
+
+<div class="form-horizontal">
+    <br><br>
+    <h4>Your Details</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", @maxlength = "10" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="col-12">
+            <h4>Recipient Address</h4>
+            <hr />
+        </div>
+
+        <div class="col-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Address, htmlAttributes: new { @class = "form-control", cols = "45", rows = "3" })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Budget, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Budget, new { htmlAttributes = new { @class = "form-control",@type="number" } })
+                @Html.ValidationMessageFor(model => model.Budget, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Zipcode, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Zipcode, new { htmlAttributes = new { @class = "form-control", @maxlength = "5" } })
+                @Html.ValidationMessageFor(model => model.Zipcode, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="col-6">
+            <div class="form-group input-append">
+                @Html.LabelFor(model => model.DeliveryDateTime, htmlAttributes: new { @class = "control-label" })
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-calendar "></i></span>
+                @Html.EditorFor(model => model.DeliveryDateTime, new { htmlAttributes = new { @class = "form-control", @id="datepicker" } })
+                @Html.ValidationMessageFor(model => model.DeliveryDateTime, "", new { @class = "text-danger" })
+            </div>
+            <div class="row form-group" style="padding-left:15px">
+                <select style="width:110px" name="hours" class="form-control">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select style="width:110px" name="mins" class="form-control">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Categories, htmlAttributes: new { @class = "control-label" })
+                @*@Html.TextAreaFor(model => model.Notes, htmlAttributes: new { @class = "form-control", cols = "45", rows = "3" })*@
+                @*@Html.DropDownListFor(m => m.Categories, (SelectList)ViewBag.ProjectList, "-- Choose a Project --", new { @class = "ddlProjectvalue" })*@
+                <select id="example" name="example" multiple="multiple"></select>
+                @*@Html.DropDownListFor(model => model.Categories,
+                    new SelectList(("#categories").val()),
+                    "Select Occassion")*@
+                @Html.ValidationMessageFor(model => model.Categories, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Notes, htmlAttributes: new { @class = "form-control", cols = "45", rows = "3" })
+                @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+    </div>
+
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+
+    @*<div class="input-group date datetimepicker-group" id="calender" data-date="2013-02-21T15:25:00Z" data-target-input="nearest">
+            @Html.TextBox("", "", new { @class = "form-control datetimepicker-input", data_target = "#calender", data_format = "2013 - 02 - 21T15:25:00Z" })
+            <div class="input-group-append input-group-addon" data-target="#calender" data-toggle="datetimepicker">
+                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+            </div>
+        </div>*@
+
+
+
+
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.Line2, htmlAttributes: new { @class = "control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Line2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Line2, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+
+
+
+
+    <div class="form-group">
+        @*<input type="submit" class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
+            id="btnsubmit"
+            rel="nofollow"
+            data-form-selector="#pd-form"
+            data-type="cart"
+            data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'
+            data-action="add"
+            data-toggle="offcanvas" data-target="#offcanvas-cart" />*@
+        @*<a class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
+               href="#"
+               rel="nofollow"
+               data-form-selector="#pd-form"
+               data-type="cart"
+               data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'
+               data-action="add"
+               data-toggle="offcanvas" data-target="#offcanvas-cart">
+                <span style="color:red">REQUEST A QUOTE</span>
+            </a>*@
+        @*<input type="submit" value='REQUEST A QUOTE' onclick="'@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'" />*@
+
+        @*<input type="submit" name="response" value="REQUEST A QUOTE" formaction=@Url.Action("AddProduct", "ShoppingCart", new { productId = Model.AddToCart.ProductId, shoppingCartTypeId = 1 }) formmethod="post" class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link" />*@
+    </div>
+</div>
+}
+
+<script>
+    function add() {
+        $.post("Add", null, Fun1);
+        ("#btnsubmit").click();
+    }
+</script>

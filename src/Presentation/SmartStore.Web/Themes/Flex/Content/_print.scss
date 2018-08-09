@@ -1,0 +1,204 @@
+//
+// Print optimization
+// --------------------------------------------------
+
+@media print {
+    .menubar-section,
+    .megamenu-section,
+    .shopbar-col:not(.shop-logo),
+    #content-left,
+    #content-right,
+    .cart-row-actions,
+    footer
+    {
+        display: none !important;
+    }
+
+    .more-less {
+        max-height: none !important;
+        .btn-text-expander { display: none !important; }
+    }
+}
+
+.navhome {
+    background: #faf6ed;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.navbar {
+    min-height: 50px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-nav {
+    margin-top: 5px;
+    flex-direction: initial;
+}
+.navbar-nav li {
+}
+.navbar-nav .nav-link{
+    padding-left:30px;
+}
+.navbar-nav li a {
+    font-size: 16px !important;
+    color: #000;
+    padding: 7px 25px;
+    display: inline-block;
+}
+.navbar-nav li a:hover {
+    color: green;
+}
+.navbar-nav {
+    margin-top: 5px;
+}
+
+.navbar-collapse {
+    width: 100%;
+    clear: both;
+}
+
+.banner-content {
+    position: absolute;
+    text-align: center;
+    bottom: 80px;
+    width: 100%;
+}
+
+.banner-content h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.banner-content p {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.banner-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    background: #fff;
+}
+
+.banner-content a:hover {
+    background: #1127ee;
+    color: #fff;
+}
+
+.banner {
+    margin-bottom: 0px;
+}
+
+.section-one {
+    background: #faf6ed;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+.section-one-cont {
+    text-align: center;
+    max-width: 270px;
+    margin: 0px auto;
+}
+
+.section-one-cont h2 {
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section-one-cont p {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px
+}
+.artlist-grid.artlist-4-cols .art{
+    text-align:center;
+    margin-left:0.3rem
+}
+
+.navbar {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.select2-search__field {
+    width: 100% !important;
+}
+
+.footer-top {
+    background: #fbf8f1;
+    padding: 50px 0;
+}
+
+.footer-block {
+    width: 20%;
+    float: left;
+}
+
+.footer-block h2 {
+    margin-bottom: 10px;
+}
+
+.footer-block a {
+    display: block;
+    padding: 4px 0;
+}
+
+.footer-block a:hover {
+    text-decoration: underline;
+    color: #04ae58;
+}
+
+.footer-block input[type=text] {
+    background: none;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #02af56;
+    width: 150px;
+}
+
+.footer-block input[type=submit] {
+    background: url(../images/submit-arrow.png) no-repeat;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 20px;
+}
+
+.footer {
+    background: #f8cfb1;
+    padding: 15px 0;
+}
