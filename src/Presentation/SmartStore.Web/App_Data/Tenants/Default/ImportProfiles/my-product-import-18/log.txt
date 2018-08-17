@@ -1,0 +1,75 @@
+﻿SmartStore Information: 8 : INFORMATION: 
+----------------------------------------
+SmartStore.NET:		v.3.1.5.0
+Import profile:		My product import 18 (Id 18)
+Entity:			Product
+File:			Feed1.xlsx
+Executed by:		admin@mystore.com
+    DateTime=2018-07-19T07:15:13.0910000Z
+SmartStore Information: 8 : INFORMATION: 
+Started:		7/19/2018 12:45:12 PM
+Finished:		7/19/2018 12:45:26 PM
+Duration:		0:00:13.989
+
+Total rows:		291
+Rows processed:		291
+Records imported:	291
+Records updated:	0
+
+Warnings:		0
+Errors:			3
+    DateTime=2018-07-19T07:15:26.0490000Z
+SmartStore Error: 2 : ERROR: [Batch: 1, Stage: ProcessProductManufacturers] Part-1 is not a valid value for Int32. * Input string was not in a correct format.
+System.Exception:    at System.ComponentModel.BaseNumberConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at SmartStore.ComponentModel.TypeConverterAdapter.ConvertFrom(CultureInfo culture, Object value) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\TypeConverterAdapter.cs:line 29
+   at SmartStore.ComponentModel.EnumerableConverter`1.<>c__DisplayClass6_0.<ConvertFrom>b__0(String x) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 101
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at SmartStore.ComponentModel.EnumerableConverter`1.<>c.<CreateSequenceActivator>b__3_2(IEnumerable`1 x) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 44
+   at SmartStore.ComponentModel.EnumerableConverter`1.ConvertFrom(CultureInfo culture, Object value) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 105
+   at SmartStore.ConversionExtensions.Convert(Object value, Type to, CultureInfo culture) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\Extensions\ConversionExtensions.cs:line 66
+   at SmartStore.ConversionExtensions.Convert[T](Object value, CultureInfo culture) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\Extensions\ConversionExtensions.cs:line 33
+   at SmartStore.Services.DataExchange.Import.ImportRow`1.TryGetDataValue[TProp](String columnName, String index, TProp& value, Boolean force) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\ImportRow.cs:line 199
+   at SmartStore.Services.DataExchange.Import.ImportRow`1.GetDataValue[TProp](String columnName, Boolean force) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\ImportRow.cs:line 170
+   at SmartStore.Services.Catalog.Importer.ProductImporter.ProcessProductManufacturers(ImportExecuteContext context, IEnumerable`1 batch) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 609
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 199
+    DateTime=2018-07-19T07:15:26.0510000Z
+SmartStore Error: 2 : ERROR: [Batch: 2, Stage: ProcessProductManufacturers] Part-101 is not a valid value for Int32. * Input string was not in a correct format.
+System.Exception:    at System.ComponentModel.BaseNumberConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at SmartStore.ComponentModel.TypeConverterAdapter.ConvertFrom(CultureInfo culture, Object value) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\TypeConverterAdapter.cs:line 29
+   at SmartStore.ComponentModel.EnumerableConverter`1.<>c__DisplayClass6_0.<ConvertFrom>b__0(String x) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 101
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at SmartStore.ComponentModel.EnumerableConverter`1.<>c.<CreateSequenceActivator>b__3_2(IEnumerable`1 x) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 44
+   at SmartStore.ComponentModel.EnumerableConverter`1.ConvertFrom(CultureInfo culture, Object value) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 105
+   at SmartStore.ConversionExtensions.Convert(Object value, Type to, CultureInfo culture) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\Extensions\ConversionExtensions.cs:line 66
+   at SmartStore.ConversionExtensions.Convert[T](Object value, CultureInfo culture) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\Extensions\ConversionExtensions.cs:line 33
+   at SmartStore.Services.DataExchange.Import.ImportRow`1.TryGetDataValue[TProp](String columnName, String index, TProp& value, Boolean force) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\ImportRow.cs:line 199
+   at SmartStore.Services.DataExchange.Import.ImportRow`1.GetDataValue[TProp](String columnName, Boolean force) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\ImportRow.cs:line 170
+   at SmartStore.Services.Catalog.Importer.ProductImporter.ProcessProductManufacturers(ImportExecuteContext context, IEnumerable`1 batch) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 609
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 199
+    DateTime=2018-07-19T07:15:26.0510000Z
+SmartStore Error: 2 : ERROR: [Batch: 3, Stage: ProcessProductManufacturers] Part-201 is not a valid value for Int32. * Input string was not in a correct format.
+System.Exception:    at System.ComponentModel.BaseNumberConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at SmartStore.ComponentModel.TypeConverterAdapter.ConvertFrom(CultureInfo culture, Object value) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\TypeConverterAdapter.cs:line 29
+   at SmartStore.ComponentModel.EnumerableConverter`1.<>c__DisplayClass6_0.<ConvertFrom>b__0(String x) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 101
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__97`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at SmartStore.ComponentModel.EnumerableConverter`1.<>c.<CreateSequenceActivator>b__3_2(IEnumerable`1 x) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 44
+   at SmartStore.ComponentModel.EnumerableConverter`1.ConvertFrom(CultureInfo culture, Object value) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\ComponentModel\TypeConversion\EnumerableConverter.cs:line 105
+   at SmartStore.ConversionExtensions.Convert(Object value, Type to, CultureInfo culture) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\Extensions\ConversionExtensions.cs:line 66
+   at SmartStore.ConversionExtensions.Convert[T](Object value, CultureInfo culture) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Core\Extensions\ConversionExtensions.cs:line 33
+   at SmartStore.Services.DataExchange.Import.ImportRow`1.TryGetDataValue[TProp](String columnName, String index, TProp& value, Boolean force) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\ImportRow.cs:line 199
+   at SmartStore.Services.DataExchange.Import.ImportRow`1.GetDataValue[TProp](String columnName, Boolean force) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\ImportRow.cs:line 170
+   at SmartStore.Services.Catalog.Importer.ProductImporter.ProcessProductManufacturers(ImportExecuteContext context, IEnumerable`1 batch) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 609
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 199
+    DateTime=2018-07-19T07:15:26.0520000Z

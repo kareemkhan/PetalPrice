@@ -1,0 +1,30 @@
+﻿SmartStore Information: 8 : INFORMATION: 
+----------------------------------------
+SmartStore.NET:		v.3.1.5.0
+Import profile:		My product import 1 (Id 1)
+Entity:			Product
+File:			ProductsSample (1).csv
+Executed by:		admin@mystore.com
+    DateTime=2018-07-18T18:23:14.1100000Z
+SmartStore Information: 8 : INFORMATION: 
+Started:		7/18/2018 11:53:14 PM
+Finished:		7/18/2018 11:53:14 PM
+Duration:		0:00:00.141
+
+Total rows:		3
+Rows processed:		0
+Records imported:	0
+Records updated:	0
+
+Warnings:		0
+Errors:			3
+    DateTime=2018-07-18T18:23:14.2480000Z
+SmartStore Error: 2 : ERROR: The 'Name' field is required for new products. Skipping row. [Pos: 1, Field: Name]
+System.Exception: Exception of type 'System.Exception' was thrown.
+    DateTime=2018-07-18T18:23:14.2600000Z
+SmartStore Error: 2 : ERROR: The 'Name' field is required for new products. Skipping row. [Pos: 2, Field: Name]
+System.Exception: Exception of type 'System.Exception' was thrown.
+    DateTime=2018-07-18T18:23:14.2600000Z
+SmartStore Error: 2 : ERROR: The 'Name' field is required for new products. Skipping row. [Pos: 3, Field: Name]
+System.Exception: Exception of type 'System.Exception' was thrown.
+    DateTime=2018-07-18T18:23:14.2600000Z

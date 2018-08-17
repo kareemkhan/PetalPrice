@@ -1,0 +1,23 @@
+﻿SmartStore Information: 8 : INFORMATION: 
+----------------------------------------
+SmartStore.NET:		v.3.1.5.0
+Import profile:		My product import 24 (Id 24)
+Entity:			Product
+File:			Feed1 (4) (1).xlsx
+Executed by:		admin@mystore.com
+    DateTime=2018-07-19T10:08:03.2773994Z
+SmartStore Information: 8 : INFORMATION: 
+Started:		7/19/2018 3:38:03 PM
+Finished:		7/19/2018 3:38:05 PM
+Duration:		0:00:02.0347965
+
+Total rows:		291
+Rows processed:		0
+Records imported:	0
+Records updated:	0
+
+Warnings:		0
+Errors:			0
+    DateTime=2018-07-19T10:08:05.3081963Z
+SmartStore Information: 8 : INFORMATION: Found equal picture in data store. Skipping field. [Pos: 4, Field: ImageUrls1]
+    DateTime=2018-07-19T10:08:05.3101961Z

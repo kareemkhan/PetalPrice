@@ -1,0 +1,21 @@
+﻿SmartStore Information: 8 : INFORMATION: 
+----------------------------------------
+SmartStore.NET:		v.3.1.5.0
+Import profile:		My product import 28 (Id 28)
+Entity:			Product
+File:			Final Feed.xlsx
+Executed by:		support@petalprice.com
+    DateTime=2018-07-27T15:06:57.4455600Z
+SmartStore Information: 8 : INFORMATION: 
+Started:		7/27/2018 8:36:57 PM
+Finished:		7/27/2018 8:37:16 PM
+Duration:		0:00:18.656
+
+Total rows:		695
+Rows processed:		695
+Records imported:	695
+Records updated:	0
+
+Warnings:		0
+Errors:			0
+    DateTime=2018-07-27T15:07:16.0875600Z

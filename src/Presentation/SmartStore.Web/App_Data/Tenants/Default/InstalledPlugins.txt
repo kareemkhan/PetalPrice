@@ -1,0 +1,12 @@
+SmartStore.GoogleAnalytics
+SmartStore.DevTools
+SmartStore.DiscountRules
+SmartStore.GoogleMerchantCenter
+SmartStore.Clickatell
+SmartStore.OfflinePayment
+SmartStore.AmazonPay
+SmartStore.PayPal
+SmartStore.FacebookAuth
+SmartStore.Shipping
+SmartStore.ShippingByWeight
+SmartStore.Tax

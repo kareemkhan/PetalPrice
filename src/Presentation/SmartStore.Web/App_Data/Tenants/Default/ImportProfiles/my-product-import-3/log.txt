@@ -1,0 +1,21 @@
+﻿SmartStore Information: 8 : INFORMATION: 
+----------------------------------------
+SmartStore.NET:		v.3.1.5.0
+Import profile:		My product import 3 (Id 3)
+Entity:			Product
+File:			Copy of Products.xlsx
+Executed by:		admin@mystore.com
+    DateTime=2018-07-13T11:01:43.1489119Z
+SmartStore Information: 8 : INFORMATION: 
+Started:		7/13/2018 4:31:42 PM
+Finished:		7/13/2018 4:31:43 PM
+Duration:		0:00:00.869
+
+Total rows:		1
+Rows processed:		1
+Records imported:	1
+Records updated:	0
+
+Warnings:		0
+Errors:			0
+    DateTime=2018-07-13T11:01:43.8389119Z

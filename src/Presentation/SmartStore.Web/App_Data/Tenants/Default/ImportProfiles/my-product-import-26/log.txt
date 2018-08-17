@@ -1,0 +1,121 @@
+﻿SmartStore Information: 8 : INFORMATION: 
+----------------------------------------
+SmartStore.NET:		v.3.1.5.0
+Import profile:		My product import 26 (Id 26)
+Entity:			Product
+File:			Feed1 (4) (1).xlsx
+Executed by:		support@petalprice.com
+    DateTime=2018-07-27T15:44:11.8765600Z
+SmartStore Information: 8 : INFORMATION: 
+Started:		7/27/2018 9:14:11 PM
+Finished:		7/27/2018 9:17:11 PM
+Duration:		0:02:59.288
+
+Total rows:		291
+Rows processed:		200
+Records imported:	200
+Records updated:	0
+
+Warnings:		16
+Errors:			5
+    DateTime=2018-07-27T15:47:11.1585600Z
+SmartStore Warning: 4 : WARNING: Parameter is not valid. [Pos: 15, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1595600Z
+SmartStore Warning: 4 : WARNING: Parameter is not valid. [Pos: 63, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1595600Z
+SmartStore Warning: 4 : WARNING: Parameter is not valid. [Pos: 126, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1595600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 187, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1595600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 188, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1595600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 189, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 190, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 191, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 193, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 194, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 195, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 196, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 197, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 198, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 199, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1605600Z
+SmartStore Warning: 4 : WARNING: An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated. [Pos: 200, Field: ImageUrls1]
+    DateTime=2018-07-27T15:47:11.1615600Z
+SmartStore Error: 2 : ERROR: [Batch: 3, Stage: ProcessProducts] An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated.
+System.Exception:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at SmartStore.Data.ObjectContextBase.SaveChangesCore() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 124
+   at SmartStore.Data.ObjectContextBase.SaveChangesOperation.Execute() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 239
+   at SmartStore.Data.ObjectContextBase.SaveChanges() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 77
+   at SmartStore.Services.Catalog.Importer.ProductImporter.ProcessProducts(ImportExecuteContext context, IEnumerable`1 batch, Dictionary`2 templateViewPaths, Dictionary`2 srcToDestId) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 451
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 113
+    DateTime=2018-07-27T15:47:11.1615600Z
+SmartStore Error: 2 : ERROR: [Batch: 3, Stage: ProcessSlugs] An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated.
+System.Exception:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at SmartStore.Data.ObjectContextBase.SaveChangesCore() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 124
+   at SmartStore.Data.ObjectContextBase.SaveChangesOperation.Execute() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 239
+   at SmartStore.Data.ObjectContextBase.SaveChanges() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 77
+   at SmartStore.Services.DataExchange.Import.EntityImporterBase.ProcessSlugs[TEntity](ImportExecuteContext context, IEnumerable`1 batch, String entityName) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\EntityImporterBase.cs:line 294
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 138
+    DateTime=2018-07-27T15:47:11.1615600Z
+SmartStore Error: 2 : ERROR: [Batch: 3, Stage: ProcessStoreMappings] An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated.
+System.Exception:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at SmartStore.Data.ObjectContextBase.SaveChangesCore() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 124
+   at SmartStore.Data.ObjectContextBase.SaveChangesOperation.Execute() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 239
+   at SmartStore.Data.ObjectContextBase.SaveChanges() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 77
+   at SmartStore.Services.DataExchange.Import.EntityImporterBase.ProcessStoreMappings[TEntity](ImportExecuteContext context, IEnumerable`1 batch) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\DataExchange\Import\EntityImporterBase.cs:line 214
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 157
+    DateTime=2018-07-27T15:47:11.1615600Z
+SmartStore Error: 2 : ERROR: [Batch: 3, Stage: ProcessProductCategories] An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated.
+System.Exception:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at SmartStore.Data.ObjectContextBase.SaveChangesCore() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 124
+   at SmartStore.Data.ObjectContextBase.SaveChangesOperation.Execute() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 239
+   at SmartStore.Data.ObjectContextBase.SaveChanges() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 77
+   at SmartStore.Services.Catalog.Importer.ProductImporter.ProcessProductCategories(ImportExecuteContext context, IEnumerable`1 batch) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 686
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 184
+    DateTime=2018-07-27T15:47:11.1615600Z
+SmartStore Error: 2 : ERROR: [Batch: 3, Stage: ProcessProductManufacturers] An error occurred while updating the entries. See the inner exception for details. * The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Product_Picture_Mapping_dbo.Picture_PictureId". The conflict occurred in database "SmartStore", table "dbo.Picture", column 'Id'.
+The statement has been terminated.
+System.Exception:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at SmartStore.Data.ObjectContextBase.SaveChangesCore() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 124
+   at SmartStore.Data.ObjectContextBase.SaveChangesOperation.Execute() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 239
+   at SmartStore.Data.ObjectContextBase.SaveChanges() in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Data\ObjectContextBase.SaveChanges.cs:line 77
+   at SmartStore.Services.Catalog.Importer.ProductImporter.ProcessProductManufacturers(ImportExecuteContext context, IEnumerable`1 batch) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 642
+   at SmartStore.Services.Catalog.Importer.ProductImporter.Import(ImportExecuteContext context) in D:\Rafiq\Projects\Shopping Cart New\src\Libraries\SmartStore.Services\Catalog\Importer\ProductImporter.cs:line 199
+    DateTime=2018-07-27T15:47:11.1625600Z
