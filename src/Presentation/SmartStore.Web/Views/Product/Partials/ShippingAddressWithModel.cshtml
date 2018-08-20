@@ -14,10 +14,28 @@
 <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 
 <script type="text/javascript">
-
-
     $(document).ready(function () {
-        $("#datepicker").datepicker({ minDate: 0, maxDate: "+4M" });
+        function validateElement(element) {
+            if ($(element).val() != "" && $(element).val() != undefined && $(element).val() != null) {
+                $(element).addClass('is-valid').removeClass('is-invalid');
+                $(element).closest("div").find(".field-validation-error").hide();
+            } else {
+                $(element).addClass('form-control').removeClass('is-valid').addClass('is-invalid');
+                $(element).closest("div").find(".field-validation-error").show();
+            }
+        }
+
+        $('#pd-form').on('change', 'select', 'input[type="text"]', function (evt) {
+            validateElement(evt.currentTarget);
+        });
+
+        $("#datepicker").datepicker({
+            minDate: 0,
+            maxDate: "+4M",
+            onSelect: function () {
+                validateElement("#datepicker");
+            }
+        });
 
         let dropdown = $('#occasions');
 
@@ -35,7 +53,6 @@
                 })
             }
         });
-
     })();
 
 </script>
@@ -216,7 +233,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.Categories, htmlAttributes: new { @class = "control-label" })
-                    @Html.DropDownListFor(model => model.Categories, new List<SelectListItem>(), new { @id = "occasions" } )
+                    @Html.ListBoxFor(model => model.Categories, new List<SelectListItem>(), new { @id = "occasions" } )
                     @*<select id="example" name="example" multiple="multiple"></select>*@
                     @Html.ValidationMessageFor(model => model.Categories, "", new { @class = "text-danger" })
                 </div>
