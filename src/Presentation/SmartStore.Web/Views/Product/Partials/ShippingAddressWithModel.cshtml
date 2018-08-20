@@ -94,7 +94,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.Budget, htmlAttributes: new { @class = "control-label" })
-                    @Html.DropDownListFor(model => model.Budget, new SelectList(budgetRanges, "Text", "Text"), new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                    @Html.DropDownListFor(model => model.Budget, new SelectList(budgetRanges, "Text", "Text"), "Choose Budget", new { htmlAttributes = new { @class = "form-control", @type = "number" } })
                     @Html.ValidationMessageFor(model => model.Budget, "", new { @class = "text-danger" })
                 </div>
 
