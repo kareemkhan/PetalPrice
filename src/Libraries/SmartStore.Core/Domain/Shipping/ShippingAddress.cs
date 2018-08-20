@@ -34,6 +34,7 @@ namespace SmartStore.Core.Domain.Shipping
         [Display(Name = "Address")]
         public string Address { get; set; }
 
+        [Required]
         public string Budget { get; set; }
 
         //[RegularExpression("([0-9]+)", ErrorMessage = "Please enter valid Postal Code")]
@@ -43,6 +44,7 @@ namespace SmartStore.Core.Domain.Shipping
         // public IList<CategoryModel> CategoriesModel { get; set; }
 
         [Display(Name = "Occasions")]
+        [Required]
         public string Categories { get; set; }
     }
 }

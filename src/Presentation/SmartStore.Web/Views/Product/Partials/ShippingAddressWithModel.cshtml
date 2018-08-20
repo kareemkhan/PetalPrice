@@ -1,12 +1,6 @@
 ﻿@model SmartStore.Core.Domain.Shipping.ShippingAddress
 
 @{
-    //$35 - $55
-    //$56 - $75
-    //$76 - $100
-    //$101 - $125
-    //$125 above
-
     IEnumerable<SelectListItem> budgetRanges = new List<SelectListItem> {
         new SelectListItem { Text = "$35 - $55" },
         new SelectListItem { Text = "$56 - $75" },
@@ -23,9 +17,9 @@
 
 
     $(document).ready(function () {
-        $("#datepicker").datepicker({ minDate: 1, maxDate: "+4M" });
+        $("#datepicker").datepicker({ minDate: 0, maxDate: "+4M" });
 
-        let dropdown = $('#example');
+        let dropdown = $('#occasions');
 
         dropdown.empty();
 
@@ -111,7 +105,7 @@
                     @Html.LabelFor(model => model.DeliveryDateTime, htmlAttributes: new { @class = "control-label" })
                     <span class="add-on"><i class="icon-remove"></i></span>
                     <span class="add-on"><i class="icon-calendar "></i></span>
-                    @Html.EditorFor(model => model.DeliveryDateTime, new { htmlAttributes = new { @class = "form-control", @id = "datepicker" } })
+                    @Html.EditorFor(model => model.DeliveryDateTime, new { htmlAttributes = new { @class = "form-control", @id = "datepicker", @readonly="true" } })
                     @Html.ValidationMessageFor(model => model.DeliveryDateTime, "", new { @class = "text-danger" })
                 </div>
                 <div class="row form-group" style="padding-left:15px">
@@ -222,12 +216,8 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.Categories, htmlAttributes: new { @class = "control-label" })
-                    @*@Html.TextAreaFor(model => model.Notes, htmlAttributes: new { @class = "form-control", cols = "45", rows = "3" })*@
-                    @*@Html.DropDownListFor(m => m.Categories, (SelectList)ViewBag.ProjectList, "-- Choose a Project --", new { @class = "ddlProjectvalue" })*@
-                    <select id="example" name="example" multiple="multiple"></select>
-                    @*@Html.DropDownListFor(model => model.Categories,
-                        new SelectList(("#categories").val()),
-                        "Select Occassion")*@
+                    @Html.DropDownListFor(model => model.Categories, new List<SelectListItem>(), new { @id = "occasions" } )
+                    @*<select id="example" name="example" multiple="multiple"></select>*@
                     @Html.ValidationMessageFor(model => model.Categories, "", new { @class = "text-danger" })
                 </div>
 
@@ -239,66 +229,7 @@
 
             </div>
         </div>
-
-
-        @*<div class="form-group">
-                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
-
-
-
-
-        @*<div class="input-group date datetimepicker-group" id="calender" data-date="2013-02-21T15:25:00Z" data-target-input="nearest">
-                @Html.TextBox("", "", new { @class = "form-control datetimepicker-input", data_target = "#calender", data_format = "2013 - 02 - 21T15:25:00Z" })
-                <div class="input-group-append input-group-addon" data-target="#calender" data-toggle="datetimepicker">
-                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                </div>
-            </div>*@
-
-
-
-
-
-        @*<div class="form-group">
-                @Html.LabelFor(model => model.Line2, htmlAttributes: new { @class = "control-label" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Line2, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Line2, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
-
-
-
-
-
-
-
         <div class="form-group">
-            @*<input type="submit" class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
-                id="btnsubmit"
-                rel="nofollow"
-                data-form-selector="#pd-form"
-                data-type="cart"
-                data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'
-                data-action="add"
-                data-toggle="offcanvas" data-target="#offcanvas-cart" />*@
-            @*<a class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link"
-                   href="#"
-                   rel="nofollow"
-                   data-form-selector="#pd-form"
-                   data-type="cart"
-                   data-href='@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'
-                   data-action="add"
-                   data-toggle="offcanvas" data-target="#offcanvas-cart">
-                    <span style="color:red">REQUEST A QUOTE</span>
-                </a>*@
-            @*<input type="submit" value='REQUEST A QUOTE' onclick="'@Url.Action("AddProduct", "ShoppingCart", new { productId = 22, shoppingCartTypeId = 1 })'" />*@
-
-            @*<input type="submit" name="response" value="REQUEST A QUOTE" formaction=@Url.Action("AddProduct", "ShoppingCart", new { productId = Model.AddToCart.ProductId, shoppingCartTypeId = 1 }) formmethod="post" class="btn btn-primary btn-lg btn-block btn-add-to-cart ajax-cart-link" />*@
         </div>
     </div>
 }
